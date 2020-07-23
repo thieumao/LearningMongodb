@@ -21,6 +21,10 @@ const user = mongoose.model('user', userScheme);
 //   console.log(users);
 // });
 
-user.update({ name: "Mot Mao"}, { age: 30}).exec((err, result) => {
-    console.log(result);
+// user.update({ name: "Mot Mao"}, { age: 24 }).exec((err, result) => {
+//     console.log(result);
+// });
+
+user.remove({ name: "Thieu Mao"}).exec((err, result) => {
+  console.log(result);
 });
