@@ -8,11 +8,15 @@ const userScheme = new mongoose.Schema({
 
 const user = mongoose.model('user', userScheme);
 
-user.create(
-  { name: "Thieu Mao", age: 28 },
-  { name: "Thu Ha", age: 24 }
-);
+// user.create(
+//   { name: "Thieu Mao", age: 28 },
+//   { name: "Thu Ha", age: 24 }
+// );
 
-user.create(
-  { name: "Mot Mao", age: 28 }
-);
+// user.create(
+//   { name: "Mot Mao", age: 28 }
+// );
+
+user.find().exec((err, users) => {
+  console.log(users);
+});
